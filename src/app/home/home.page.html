@@ -1,20 +1,43 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title size="large">Segment Color Issue</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <h2>No color Toolbar</h2>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="view" mode="ios">
+      <ion-segment-button value="seg1">Seg 1</ion-segment-button>
+      <ion-segment-button value="seg2">Seg 2</ion-segment-button>
+      <ion-segment-button value="seg3">Seg 3</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <h2>"light" color toolbar (buttons unreadable in light mode).</h2>
+  <ion-toolbar color="light">
+    <ion-segment [(ngModel)]="view" mode="ios">
+      <ion-segment-button value="seg1">Seg 1</ion-segment-button>
+      <ion-segment-button value="seg2">Seg 2</ion-segment-button>
+      <ion-segment-button value="seg3">Seg 3</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <h2>"medium" color toolbar.</h2>
+  <ion-toolbar color="medium">
+    <ion-segment [(ngModel)]="view" mode="ios">
+      <ion-segment-button value="seg1">Seg 1</ion-segment-button>
+      <ion-segment-button value="seg2">Seg 2</ion-segment-button>
+      <ion-segment-button value="seg3">Seg 3</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <h2>"dark" color toolbar (buttons unreadable in dark mode).</h2>
+  <ion-toolbar color="dark">
+    <ion-segment [(ngModel)]="view" mode="ios">
+      <ion-segment-button value="seg1">Seg 1</ion-segment-button>
+      <ion-segment-button value="seg2">Seg 2</ion-segment-button>
+      <ion-segment-button value="seg3">Seg 3</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-content>

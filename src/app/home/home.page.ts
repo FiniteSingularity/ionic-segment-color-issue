@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  view = 'seg1';
+  theme = 'ios';
   constructor() {}
 
+  toggleTheme() {
+    this.theme = this.theme === 'ios' ? 'md' : 'ios';
+  }
 }
